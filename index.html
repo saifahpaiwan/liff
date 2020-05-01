@@ -35,6 +35,7 @@
   <button id="btnScanCode" onclick="scanCode()">Scan Code</button>
   <button id="btnLogOut" onclick="logOut()">Log Out</button>
   <button id="btnClose" onclick="closed()">Close</button>
+  <button id="reload" onclick="reload()">Reload</button>
 
   <!-- <script src="js/vconsole.min.js"></script> -->
   <!-- <script>
@@ -44,6 +45,10 @@
 
   <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
   <script>
+    
+    function reload() {
+      location.replace('https://saifahpaiwan.github.io/liff/');
+    }
     function createUniversalLink() {
     }
 
