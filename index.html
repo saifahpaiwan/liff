@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
-  <title>My LIFF app PS</title>
-  <link rel="stylesheet" href="css/style.css" media="all">
+  <title>My LIFF app SAIFAH</title>
+  <!-- <link rel="stylesheet" href="css/style.css" media="all"> -->
 </head>
 <body>
   <p id="os"><b>OS:</b> </p>
@@ -73,10 +73,13 @@
 
     async function getUserProfile() {
       const profile = await liff.getUserProfile()
+      console.log(profile);
       document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
+      document.getElementById("decodedIDToken").append(liff.getdecodedIDToken().email)
+      
     }
 
     function getEnvironment() {
