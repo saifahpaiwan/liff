@@ -78,12 +78,11 @@
 
     async function getUserProfile() {
       const profile = await liff.getUserProfile()
-      console.log(profile);
       document.getElementById("pictureUrl").src = profile.pictureUrl
       document.getElementById("userId").append(profile.userId)
       document.getElementById("statusMessage").append(profile.statusMessage)
       document.getElementById("displayName").append(profile.displayName)
-      document.getElementById("decodedIDToken").append(liff.getdecodedIDToken().email)
+      document.getElementById("decodedIDToken").append(liff.getDecodedIDToken().email)
       
     }
 
@@ -92,8 +91,8 @@
       document.getElementById("language").append(liff.getLanguage())
       document.getElementById("version").append(liff.getVersion())
       document.getElementById("accessToken").append(liff.getAccessToken())
-      document.getElementById("isInClient").append(liff.getisInClient())
-      if(liff.getisInClient()){
+      document.getElementById("isInClient").append(liff.isInClient())
+      if(liff.isInClient()){
         document.getElementById("btnLogOut").style.display = "none"
       } else {
         document.getElementById("btnMsg").style.display = "none"
@@ -101,6 +100,7 @@
         document.getElementById("btnClose").style.display = "none"
       }
     }
+
 
     async function main() {
        await liff.init({ liffId: "1654164244-QorR95jo" })
